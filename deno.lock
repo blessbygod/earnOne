@@ -1,7 +1,23 @@
 {
   "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:@types/node": "npm:@types/node@18.16.19"
+    },
+    "npm": {
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
+      }
+    }
+  },
+  "redirects": {
+    "https://esm.sh/linkedom": "https://esm.sh/linkedom@0.18.4"
+  },
   "remote": {
     "https://deno.land/std@0.120.0/fs/exists.ts": "c3c3335a212bd945bb75df379096ab57fb6c86598fa273dfb24da3b3939a951e",
+    "https://deno.land/std@0.154.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
+    "https://deno.land/std@0.154.0/flags/mod.ts": "96c6bf6b1e3505c5f81db138c3312e5ceec8a639d8c26a14497d8fd3aa603f45",
     "https://deno.land/std@0.180.0/_util/asserts.ts": "178dfc49a464aee693a7e285567b3d0b555dc805ff490505a8aae34f9cfb1462",
     "https://deno.land/std@0.180.0/_util/os.ts": "d932f56d41e4f6a6093d56044e29ce637f8dcc43c5a90af43504a889cf1775e3",
     "https://deno.land/std@0.180.0/fs/_util.ts": "65381f341af1ff7f40198cee15c20f59951ac26e51ddc651c5293e24f9ce6f32",
@@ -41,6 +57,23 @@
     "https://deno.land/std@0.193.0/jsonc/parse.ts": "2910e33bc7c3b243e3b6f3a39ce4d6ca84337b277a8df6f2ad2d9e4adbcddc08",
     "https://deno.land/std@0.224.0/fs/exists.ts": "3d38cb7dcbca3cf313be343a7b8af18a87bddb4b5ca1bd2314be12d06533b50f",
     "https://deno.land/x/momentjs@2.29.1-deno/mod.ts": "f0c8542988b812d2aeaabe4fe3d86e7638ba6dd469ac9dd252eb2d9a765b8b49",
-    "https://deno.land/x/momentjs@2.29.1-deno/node_modules/moment/moment.js": "7ba0da6b25146fe95a948b47ec8a7707b4bcf6a87390d4b655a0663e107f7845"
+    "https://deno.land/x/momentjs@2.29.1-deno/node_modules/moment/moment.js": "7ba0da6b25146fe95a948b47ec8a7707b4bcf6a87390d4b655a0663e107f7845",
+    "https://esm.sh/linkedom@0.18.4": "f6a0db4b43763ada73eccf137a602a673aa14f9a71ff4eef9e1b08b56affb6bb",
+    "https://esm.sh/v135/boolbase@1.0.0/denonext/boolbase.mjs": "4e3bd67e9b1c5c55094eae98345d0107c6a44ef57bd3d4b9579698fa44722280",
+    "https://esm.sh/v135/canvas@2.11.2/denonext/canvas.mjs": "4245b1d01d91b5e807b85e40e98efe28c93634260bd8cb5ac0da71c42098a1a4",
+    "https://esm.sh/v135/css-select@5.1.0/denonext/css-select.mjs": "7f4fb680eff2223a68fb5a1efa12e905077d7e6c44ae66c01fc437fe7af58f8b",
+    "https://esm.sh/v135/css-what@6.1.0/denonext/css-what.mjs": "283d02df6fef73d3223b55324b559b363dd0e4c008ea1efbcf9f14b8f2642202",
+    "https://esm.sh/v135/cssom@0.5.0/denonext/cssom.mjs": "c4216df78cba2c7be94853258b6b28c681e60ff89d4aeb3149b0ac91302be428",
+    "https://esm.sh/v135/dom-serializer@2.0.0/denonext/dom-serializer.mjs": "700001f5fdb9f72fc7d1f169be700489ddd7f19489b58b6e8691ff1fca9000fe",
+    "https://esm.sh/v135/domelementtype@2.3.0/denonext/domelementtype.mjs": "371936c356d5ac797f2ce3a66b98dfc73e6fff0e095b2858b85668e6ad7d10e0",
+    "https://esm.sh/v135/domhandler@5.0.3/denonext/domhandler.mjs": "8c6e56c4596bbe7e9fd9d615f8fcdec7f11075f217bdc966a02ebe89c01b9f6f",
+    "https://esm.sh/v135/domutils@3.1.0/denonext/domutils.mjs": "2a86554cc5f543a068bbf6ea6ed0647f4ad4c3ccb555f0da9fae09180cd7b611",
+    "https://esm.sh/v135/entities@4.5.0/denonext/entities.mjs": "a9e8f9c22022c34755d1189030ac30c68545ccf8532fa32654c50fe9d90a13a1",
+    "https://esm.sh/v135/entities@4.5.0/denonext/lib/decode.js": "7fea6d8bd725edbbf7ea05031d2ea1bbbc1166dc11e3345d541198dd2dc16f1e",
+    "https://esm.sh/v135/entities@4.5.0/denonext/lib/escape.js": "7ebdc622bf3618bab25db40da4a49e2b9d03f044745f125f0bc3359f2d060def",
+    "https://esm.sh/v135/htmlparser2@9.1.0/denonext/htmlparser2.mjs": "e5186144ca1dd8829bda984fd778500356f241597c67e2c674213c684168e985",
+    "https://esm.sh/v135/linkedom@0.18.4/denonext/linkedom.mjs": "b18f03bb8b8e84a473efae0562cba4e54e68faa6603068c7c6498da00c1656d3",
+    "https://esm.sh/v135/nth-check@2.1.1/denonext/nth-check.mjs": "638b4f5a22236cd05c7d1d43e5c6ea719695c4a8bc7beccdf8d97a434bea96dc",
+    "https://esm.sh/v135/uhyphen@0.2.0/denonext/uhyphen.mjs": "53c707ad31488ef2f131e2ac9257d91b7b590a777e60288a34b3a04f1e65ad5a"
   }
 }

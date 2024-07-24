@@ -1,9 +1,15 @@
+/**
+ * @description: logger with file and console handler
+ *
+ *
+ */
+
 import { ensureDir } from "https://deno.land/std@0.180.0/fs/mod.ts";
 import { getLogger, LogRecord } from "https://deno.land/std@0.182.0/log/mod.ts";
 import { ConsoleHandler, FileHandler } from "https://deno.land/std@0.182.0/log/handlers.ts";
 import moment from "moment";
 import { getConfig } from "./config.ts";
-import { animate } from "./utils.ts";
+import { animate } from "./tools.ts";
 import { DateTimeFormat, Config } from "../types/index.ts";
 
 // if logs, csvs folder not exists, create it
@@ -79,7 +85,7 @@ const logger = getLogger();
 // 每隔一段时间检查日期是否发生变化，如果发生变化则创建新的日志文件
 setTimeout(() => {
 	animate(async () => {
-		const configName = sessionStorage.getItem('configName');
+		const configName = sessionStorage.getItem('configName') ?? 'acc-1';
 		const config: Config = await getConfig(configName);
 		config.name = configName;
 		if (!config.name) return;

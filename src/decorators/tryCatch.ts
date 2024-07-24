@@ -1,5 +1,5 @@
 
-export function tryCatch(target: any, key: string, descriptor: PropertyDescriptor) {
+export function TryCatch(target: any, key: string, descriptor: PropertyDescriptor) {
 	const originalMethod = descriptor.value;
 
 	// rewrite origin method
