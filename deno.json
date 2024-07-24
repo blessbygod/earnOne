@@ -1,0 +1,14 @@
+{
+	"imports": {
+		"lodash": "https://esm.sh/lodash@4.17.21",
+		"moment": "https://deno.land/x/momentjs@2.29.1-deno/mod.ts",
+		"pptr": "https://deno.land/x/pptr@1.2.0/mod.ts",
+		"pako": "https://cdn.skypack.dev/pako",
+		"redis": "https://deno.land/x/redis@v0.31.0/redis.ts",
+		"redisPubSub": "https://deno.land/x/redis@v0.31.0/pubsub.ts"
+	},
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	}
+}
