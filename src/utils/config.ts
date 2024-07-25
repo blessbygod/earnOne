@@ -11,6 +11,10 @@ import {
 	Config
 } from '../types/index.ts';
 
+export const configMap: {
+	[x: string]: Config
+} = {};
+
 // 读取json文件， 如果没有，则读取jsonc文件
 export function readJSON(filePath: string) {
 	let json = {};
@@ -34,8 +38,15 @@ const localConfig = readJSON('./config/default.jsonc');
 
 
 export function getConfig(configPath = 'default', openLog = false) {
+	// 如果当前路径下的配置文件已经获取过一次，直接返回反序列化的对象
+	if (configMap[configPath]) {
+		return configMap[configPath];
+	}
+
 	const __config = deepMerge({}, localConfig, readJSON(`./config/${configPath}.json`));
+	configMap[configPath] = __config as Config;
 	openLog && console.info(`load config from ${configPath}: `, __config);
-	return __config as Config;
+
+	return configMap[configPath];
 }
 
