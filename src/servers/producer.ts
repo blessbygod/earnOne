@@ -6,22 +6,14 @@
 import { InjectConfig } from "../decorators/config.ts";
 
 import EventEmitter from "https://deno.land/x/events@v1.0.0/mod.ts";
+import { Config } from "../types/config.ts";
 
 @InjectConfig
-class Producer extends EventEmitter {
-	private static instance: Producer;
-	private constructor() {
-		super();
-	}
+class Producer extends EventEmitter { // 通过多重继承的方式，将 Config 的属性注入到 Producer 中
+	public config!: Config;
 
-	public static getInstance(): Producer {
-		if (!Producer.instance) {
-			Producer.instance = new Producer();
-		}
-		return Producer.instance;
-	}
-	public produce(message: string): void {
-		this.emit('message', message);
+	public constructor() {
+		super();
 	}
 
 }

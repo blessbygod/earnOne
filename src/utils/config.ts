@@ -49,4 +49,3 @@ export function getConfig(configPath = 'default', openLog = false) {
 
 	return configMap[configPath];
 }
-

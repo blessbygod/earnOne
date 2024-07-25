@@ -7,7 +7,15 @@ import {
 } from '../types/index.ts';
 import { getConfig } from '../utils/index.ts';
 
-export function InjectConfig(originClass: Function) {
+export function InjectConfig<T extends { new(...args: any[]): {} }>(originClass: T) {
 	const configPath = sessionStorage.getItem('configPath') || 'default';
-	originClass.prototype.config = getConfig(configPath);
+	const ConfigClass = class extends originClass {
+		public config: Config = getConfig(configPath);
+
+		constructor(...args: any[]) {
+			super(...args);
+		}
+	};
+
+	return ConfigClass;
 }

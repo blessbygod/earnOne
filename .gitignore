@@ -2,3 +2,5 @@ node_modules/*
 *.log
 *.map
 config/acc-*.json*
+csvs/*
+logs/*
