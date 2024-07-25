@@ -3,15 +3,17 @@
  *
  */
 
+import { InjectConfig } from "../decorators/config.ts";
+
 import EventEmitter from "https://deno.land/x/events@v1.0.0/mod.ts";
 
+@InjectConfig
 class Producer extends EventEmitter {
 	private static instance: Producer;
-
-	@Config
 	private constructor() {
 		super();
 	}
+
 	public static getInstance(): Producer {
 		if (!Producer.instance) {
 			Producer.instance = new Producer();
@@ -21,8 +23,6 @@ class Producer extends EventEmitter {
 	public produce(message: string): void {
 		this.emit('message', message);
 	}
-
-
 
 }
 
